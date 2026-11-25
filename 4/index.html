@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department of Citizen Services — E-Governance Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="gov-header">
+    <h1>Department of Citizen Services — E-Governance Portal</h1>
+    <p>Unified Online Access to Government Services, Announcements &amp; Citizen Registration</p>
+    <nav>
+      <a href="#categories">Service Categories</a> |
+      <a href="#announcements">Announcements</a> |
+      <a href="#instructions">Instructions</a> |
+      <a href="#multimedia">Help &amp; Tutorials</a> |
+      <a href="#registration">Citizen Registration</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="categories" class="card">
+      <h2>Online Government Service Categories</h2>
+      <ul>
+        <li><strong>Civil Registration:</strong> Birth, Marriage, Income &amp; Residence Certificates</li>
+        <li><strong>Transport &amp; Licensing:</strong> Learner License, Driving License Renewal &amp; RC Status</li>
+        <li><strong>Revenue &amp; Property:</strong> Land Records, Patta Extract &amp; Property Tax Payment</li>
+        <li><strong>Social Welfare:</strong> Senior Citizen Pension &amp; Student Scholarship Schemes</li>
+      </ul>
+    </section>
+
+    <section id="announcements" class="card">
+      <h2>Public Announcements &amp; Application Links</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Department Announcement</th>
+            <th>Category</th>
+            <th>Application Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>15 Nov 2026</td>
+            <td>Online Income &amp; Community Certificate Portal Upgraded for Instant Verification</td>
+            <td>Civil Registration</td>
+            <td><a href="#registration">Apply Online</a></td>
+          </tr>
+          <tr>
+            <td>18 Nov 2026</td>
+            <td>Digital Ration Card Address Update &amp; Member Addition Window Open</td>
+            <td>Social Welfare</td>
+            <td><a href="#instructions">Read Instructions</a></td>
+          </tr>
+          <tr>
+            <td>21 Nov 2026</td>
+            <td>Property Tax Early-Payment Rebate Extended Until End of Month</td>
+            <td>Revenue &amp; Property</td>
+            <td><a href="#registration">Register Citizen ID</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <article id="instructions" class="card">
+      <h2>Citizen Application Instructions</h2>
+      <ol>
+        <li>Keep your Aadhaar-linked mobile number active for OTP authentication.</li>
+        <li>Prepare scanned copies of identity and address proof in PDF or JPEG format (max 2 MB).</li>
+        <li>Fill in the Citizen Registration Form below and retain your generated Reference ID.</li>
+      </ol>
+      <figure>
+        <img src="citizen-helpdesk.jpg" alt="Citizens accessing online government services at a Digital Seva Kendra" width="460">
+        <figcaption>Fig 1. Assisted E-Governance Citizen Service Helpdesk</figcaption>
+      </figure>
+    </article>
+
+    <section id="multimedia" class="card">
+      <h2>Citizen Audio &amp; Video Guidance</h2>
+      <div>
+        <h3>Audio Instructions for Document Upload</h3>
+        <audio controls>
+          <source src="citizen-guidelines.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div>
+        <h3>Step-by-Step Portal Walkthrough Video</h3>
+        <video controls width="520" poster="tutorial-poster.jpg">
+          <source src="portal-walkthrough.mp4" type="video/mp4">
+          <track src="captions-en.vtt" kind="captions" srclang="en" label="English" default>
+          Your browser does not support the video element.
+        </video>
+      </div>
+      <div>
+        <h3>Embedded National Service Directory Frame</h3>
+        <iframe src="https://www.india.gov.in" title="National Portal of India Reference" width="520" height="260"></iframe>
+      </div>
+    </section>
+
+    <section id="registration" class="card">
+      <h2>Citizen Registration &amp; Service Application Form</h2>
+      <form action="#" method="post">
+        <p>
+          <label for="fullName">Applicant Full Name:</label><br>
+          <input type="text" id="fullName" name="fullName" required minlength="3" placeholder="Enter full name as per ID">
+        </p>
+        <p>
+          <label for="email">Official Email Address:</label><br>
+          <input type="email" id="email" name="email" required placeholder="citizen@example.com">
+        </p>
+        <p>
+          <label for="password">Create Portal Password:</label><br>
+          <input type="password" id="password" name="password" required minlength="8" placeholder="Minimum 8 characters">
+        </p>
+        <p>
+          <label for="age">Applicant Age:</label><br>
+          <input type="number" id="age" name="age" min="18" max="110" required>
+        </p>
+        <p>
+          <label for="dob">Date of Birth:</label><br>
+          <input type="date" id="dob" name="dob" required>
+        </p>
+        <p>
+          <span>Citizen Category:</span><br>
+          <label><input type="radio" name="citizenCategory" value="general" checked> General Citizen</label>
+          <label><input type="radio" name="citizenCategory" value="senior"> Senior Citizen</label>
+          <label><input type="radio" name="citizenCategory" value="student"> Student</label>
+        </p>
+        <p>
+          <span>Services Required:</span><br>
+          <label><input type="checkbox" name="reqService" value="income"> Income Certificate</label>
+          <label><input type="checkbox" name="reqService" value="residence"> Residence Proof</label>
+          <label><input type="checkbox" name="reqService" value="license"> Driving License</label>
+          <label><input type="checkbox" name="reqService" value="tax"> Property Tax</label>
+        </p>
+        <p>
+          <label for="district">District / Jurisdiction:</label><br>
+          <select id="district" name="district" required>
+            <option value="">-- Select District --</option>
+            <option value="coimbatore">Coimbatore</option>
+            <option value="chennai">Chennai</option>
+            <option value="madurai">Madurai</option>
+            <option value="salem">Salem</option>
+          </select>
+        </p>
+        <p>
+          <label for="address">Residential Address &amp; Application Purpose:</label><br>
+          <textarea id="address" name="address" rows="4" cols="45" required placeholder="Enter complete residential address"></textarea>
+        </p>
+        <p>
+          <label for="idProof">Upload Identity &amp; Address Proof (PDF/JPG):</label><br>
+          <input type="file" id="idProof" name="idProof" accept=".pdf,.jpg,.jpeg,.png" required>
+        </p>
+        <p>
+          <button type="submit">Submit Citizen Registration</button>
+          <button type="reset">Reset Form</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="gov-footer">
+    <p>&copy; 2026 Department of Citizen Services | National E-Governance Initiative | Helpline: 1800-11-0000</p>
+  </footer>
+</body>
+</html>
